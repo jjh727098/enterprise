@@ -1,0 +1,70 @@
+/* 초기화 + 세팅 + 변수 */
+:root{
+    --progress-visible: 0px;
+}
+
+/* 초가화 */
+
+*{margin:0;padding:0;font:inherit;color:inherit;border: 0;box-sizing: border-box;}
+*, :after, :before {
+    box-sizing:border-box;
+    /*패딩 보더*/
+}
+html, body {height: 100%;} 
+img, picture, video, canvas, svg {display: block;max-width:100%;}
+button {background:none;border:0;cursor:pointer;}
+a {text-decoration:none}
+table {border-collapse:collapse;border-spacing:0}
+fieldset, input{
+    border: 0;
+}
+ul{list-style: none;}
+
+body{
+    font-family: 'Archivo','NotoSansCJKkr';
+    margin: 0;
+    word-break: keep-all;
+    overflow-x: hidden;
+    transition: background-color 0.5s;
+}
+body.dark{
+    background: #000;
+}
+
+
+/* font */
+@font-face {
+    font-family: "Archivo";
+    font-weight: bold;
+    src: url(../fonts/Archivo-Bold.woff2) format("font-woff2");
+  }
+@font-face {
+    font-family: "Archivo";
+    font-weight: 600;
+    src: url(../fonts/Archivo-SemiBold.woff2) format("font-woff2");
+  }
+@font-face {
+    font-family: "Archivo";
+    font-weight: 500;
+    src: url(../fonts/Archivo-Regular.woff2) format("font-woff2");
+  }
+@font-face {
+    font-family: "Archivo";
+    font-weight: 300;
+    src: url(../fonts/Archivo-Light.woff2) format("font-woff2");
+  }
+@font-face {
+    font-family: "NotoSansCJKkr";
+    font-weight: bold;
+    src: url(../fonts/NotoSansCJKkr-Bold.woff2) format("font-woff2");
+}
+@font-face {
+    font-family: "NotoSansCJKkr";
+    font-weight: 500;
+    src: url(../fonts/NotoSansCJKkr-Regular.woff2) format("font-woff2");
+}
+@font-face {
+    font-family: "NotoSansCJKkr";
+    font-weight: 300;
+    src: url(../fonts/NotoSansCJKkr-Light.woff2) format("font-woff2");
+}
