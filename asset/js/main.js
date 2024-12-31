@@ -2,9 +2,8 @@ gsap.defaults({
   ease:"none"
 })
 
-// header 
+// 헤더 영역
 let lastScroll = 0;
-
 
   ScrollTrigger.create({
     trigger:".challenge_container",
@@ -50,7 +49,7 @@ $(window).scroll(function(){
     $('.lang_list').toggleClass('on');
 })
 
-// top btn 
+// 최상단 이동 탑 버튼
 $('.top_btn').click(function(){
   window.scrollTo({
       top:0,
@@ -58,9 +57,7 @@ $('.top_btn').click(function(){
   })
 });
 
-
-
-//intro
+// 인트로 영역
 const introTl = gsap.timeline({
   scrollTrigger:{
     trigger: ".sc_intro",
@@ -88,7 +85,7 @@ introTl
 .to('.group_intro_desc .intro_text:nth-child(4)',{ opacity:1, })
 
   
-// showcase
+// 쇼케이스 영역
 const showcaseTl = gsap.timeline({
   scrollTrigger:{
     trigger: ".sc_showcase",
@@ -112,7 +109,7 @@ showcaseTl
 .to('.sc_showcase .group_show_intro',2,{'--opacity':1 },"last")
 .to('.sc_showcase .group_show_desc',2,{opacity:1 },"last")
 
-// prove
+// prove 영역
 $('.prove_container').each(function(i,el){
   const prove = gsap.timeline();
   prove.to(el, {'--progress':1}, "text")
@@ -126,8 +123,7 @@ $('.prove_container').each(function(i,el){
   });
 })
 
-
-// possible
+// possible 영역
 ScrollTrigger.create({
   trigger:".sc_possible",
   start:"0% 50%",
@@ -153,15 +149,13 @@ const possibleTl = gsap.timeline({
 possibleTl
 .to('.sc_possible .group_slide .slide_inner',{
   xPercent:-100,
-  // x:()=>{
-  //   return window.innerWidth-100
-  // },
+
   x:function(){
     return window.innerWidth-100
   }
 })
 
-// feature
+// feature 영역
 const feature = gsap.timeline();
 feature.to(".group_feature .feature_item",1, { transform: 'translateX(0%)' })
 feature.to(".feature_wrapper .feature_desc",1,{ 
@@ -184,10 +178,7 @@ ScrollTrigger.create({
     // markers:true,
 });
 
-
-
-
-// service1
+// service1 영역
 const service1Tl = gsap.timeline({
   scrollTrigger:{
     trigger: "#service1",
@@ -224,7 +215,7 @@ const service2Tlv2 = gsap.timeline({
 })
 service2Tlv2.to('#service2 .service_card_box .service_card_title',{opacity:1})
 
-// service2
+// service2 영역
 gsap.set('#service2 .service_card_box',{autoAlpha:0})
 
 ScrollTrigger.create({
@@ -245,7 +236,8 @@ ScrollTrigger.create({
 });
 
 gsap.set('#service3 .slide_box .card_item:nth-child(1)',{autoAlpha:0})
-// service3
+
+// service3 영역
 const service1T3 = gsap.timeline({
   scrollTrigger:{
     trigger: "#service3",
@@ -273,7 +265,7 @@ service1T3
 .to('#service3 .card_item:nth-child(2)',1,{ xPercent:-100, x:-40 },'a+=0.7')
 .to('#service3 .card_item:nth-child(4)',1,{ xPercent:-100*3, x:-40*3 },'a+=0.7')
 
-// // service4
+// service4 영역
 gsap.set('#service4 .service_card_box',{autoAlpha:0,})
 
 const service1T4 = gsap.timeline({
@@ -300,7 +292,7 @@ const service1T4 = gsap.timeline({
 service1T4
 .to('#service4 .service_bottom_desc',{opacity:1,},'a')
 
-// finance
+// finance 영역
 const financeTl = gsap.timeline({
   scrollTrigger:{
     trigger: ".finance_container",
@@ -335,7 +327,7 @@ $('.finance_container .card_list .card_item').each(function(i,el){
 gsap.set('.creator_info',{ opacity:0})
 gsap.set('.creator_scroll_down',{ opacity:0})
 
-// creator
+// creator 영역
 const creatorTl = gsap.timeline({
   scrollTrigger:{
     trigger: ".group_creator",
@@ -349,7 +341,7 @@ creatorTl
 .to('.creator_info',{ opacity:1, },'a')
 .to('.creator_scroll_down',{ opacity:1, },'a')
 
-// creator_slide
+// creator의 슬라이드
 const creator_slideTl = gsap.timeline({
   scrollTrigger:{
     trigger: ".group_creator_slide",
@@ -366,7 +358,7 @@ creator_slideTl
   xPercent:-45,
 })
 
-// footer
+// 푸터
 gsap.set('.group_join',{yPercent:100})
 
 const footerTl = gsap.timeline({
