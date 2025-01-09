@@ -19,6 +19,7 @@ fieldset, input{
     border: 0;
 }
 ul{list-style: none;}
+ol{list-style: none;}
 
 body{
     font-family: 'Archivo','NotoSansCJKkr';
