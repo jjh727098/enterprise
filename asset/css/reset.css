@@ -27,6 +27,7 @@ body{
     word-break: keep-all;
     overflow-x: hidden;
     transition: background-color 0.5s;
+    min-width: 1520px;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Archivo','NotoSansCJKkr';
