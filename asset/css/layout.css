@@ -24,7 +24,7 @@
     padding: 0 100px;
 }
 #header .logo{
-    width: 100px;
+    width: 110px;
 }
 #header .logo a{
     display: inline-block;
@@ -63,7 +63,7 @@ header.dark .group_site svg{
 #header .group_site .site_list .site_item a{
     display: inline-block;
     padding: 23px 25px;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     line-height: 1;
 
@@ -84,7 +84,7 @@ header.dark .group_site svg{
 #header .lang_area .lang_desc .lang_btn{
     display: inline-block;
     margin: 0 5px;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     line-height: 1;
 }
@@ -132,19 +132,19 @@ header.dark .group_site svg{
     padding: 58px 0;
 }
 .footer_left .footer_desc address{
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1;
+    margin-bottom: 10px;
 }
 .footer_left .footer_desc .copy{
-    margin-top: 10px;
     font-weight: 300;
     line-height: 1;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 16px;
 }
 .footer_right img{
-    width: 193px;
+    width: 220px;
     display: block;
 }
 

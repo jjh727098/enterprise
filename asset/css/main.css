@@ -224,10 +224,16 @@
     color: #fff;
     align-items: center;
 }
-.prove_container .group_prove_title .prove_text:nth-child(1){
+.prove_container.v1 .group_prove_title .prove_text:nth-child(1){
     transform: translateX(calc(-172%*var(--progress)));
 }
-.prove_container .group_prove_title .prove_text:nth-child(3){
+.prove_container.v1 .group_prove_title .prove_text:nth-child(3){
+    transform: translateX(calc(132%*var(--progress)));
+}
+.prove_container.v2 .group_prove_title .prove_text:nth-child(1){
+    transform: translateX(calc(-130%*var(--progress)));
+}
+.prove_container.v2 .group_prove_title .prove_text:nth-child(3){
     transform: translateX(calc(132%*var(--progress)));
 }
 
@@ -1098,7 +1104,7 @@
     opacity: 0;
 }
 .sc_creator .creator_title .creator_text{
-    font-size: 60px;
+    font-size: 70px;
     font-weight: 600;
     line-height: 1.2 !important;
 }
@@ -1108,7 +1114,7 @@
 }
 
 .sc_creator .creator_desc p{
-    font-size: 24px;
+    font-size: 28px;
     line-height: 1.67;
     font-weight: 600;
     margin: 0;
@@ -1184,13 +1190,13 @@
     margin-bottom: 34px;
 }
 .group_ground .ground_title h2{
-    font-size: 72px;
+    font-size: 82px;
     line-height: 1.28;
     font-weight: 600;
     color: #000;
 }
 .group_ground .ground_desc p{
-    font-size: 24px;
+    font-size: 30px;
     line-height: 1.67;
     font-weight: 600;
     color: #000;
@@ -1204,7 +1210,7 @@
     color: #fff;
 }
 .ground_btn_area .ground_link{
-    font-size: 18px;
+    font-size: 20px;
     line-height: 2.22;
     font-weight: 600;
     text-decoration: none;
