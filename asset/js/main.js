@@ -246,12 +246,12 @@ const service1T3 = gsap.timeline({
     // markers: true,
     scrub:0,
     onEnter:function(){
-      gsap.set('#service2 .service_card_box',{autoAlpha:0,})
-      gsap.set('#service3 .slide_box .card_item:nth-child(1)',{autoAlpha:1,})
+      gsap.set('#service2 .service_card_box', { autoAlpha: 0});
+      gsap.set('#service3 .slide_box .card_item:nth-child(1)',{autoAlpha: 1})
     },
     onLeaveBack:function(){
-      gsap.set('#service2 .service_card_box',{autoAlpha:1,})
-      gsap.set('#service3 .slide_box .card_item:nth-child(1)',{autoAlpha:0,})
+      gsap.set('#service2 .service_card_box', { autoAlpha: 1 });
+      gsap.set('#service3 .slide_box .card_item:nth-child(1)', { autoAlpha: 0});
     }
   }
 })
@@ -302,12 +302,26 @@ const financeTl = gsap.timeline({
     scrub:0,
     invalidateOnRefresh:true,
     toggleClass:"active",
+    onUpdate: function (self) {
+      console.log(self);
+      if (self.progress > 0.5) {
+        gsap.to('.left_text:nth-child(1)', {opacity: 1}, 'b');
+        gsap.to('.left_text:nth-child(2)', {opacity: 0}, 'b');
+      } else {
+        gsap.to('.left_text:nth-child(2)', {opacity: 1}, 'b');
+        gsap.to('.left_text:nth-child(1)', {opacity: 0}, 'b');
+      }
+    }
   }
 })
 financeTl
-.to('.finance_container .slide_inner',1,{xPercent:-45,},"a+=.7")
-.to('.left_title .left_text:nth-child(1)',.5,{opacity:0,},"a+=1.5")
-.to('.left_title .left_text:nth-child(2)',.5,{opacity:1,},"a+=2.2")
+.to('.finance_container .slide_inner',{
+  xPercent:-100,
+
+  x:function(){
+    return window.innerWidth-100
+  }
+})
 
 $('.finance_container .card_list .card_item').each(function(i,el){
   gsap.to(el,{
@@ -355,7 +369,11 @@ const creator_slideTl = gsap.timeline({
 })
 creator_slideTl
 .to('.group_creator_slide .slide_inner',{
-  xPercent:-45,
+  xPercent:-100,
+
+  x:function(){
+    return window.innerWidth-100
+  }
 })
 
 // 푸터
@@ -363,8 +381,8 @@ gsap.set('.group_join',{yPercent:100})
 
 const footerTl = gsap.timeline({
   scrollTrigger:{
-    trigger: ".ground_container",
-    start: '0% 0%',
+    trigger: ".group_ground",
+    start: '50% 50%',
     end: '100% 100%',
     // markers: true,
     scrub:0,

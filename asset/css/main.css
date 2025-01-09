@@ -773,7 +773,6 @@
 }
 .card_list.v2 .card_item,
 .card_list.v2 .card_item .card_item_box::before{
-    transition: opacity .5s;
     background-blend-mode: multiply;
     background-color: hsla(0,0%,42%,.3);
 }
@@ -1051,13 +1050,17 @@
     top: 0;
     left: 50%;
     transform: translateX(-46.5%);
+    transition: .3s;
+}
+.finance_container .slide_desc_box{
+    padding: 0 60px 0 160px;
 }
 .finance_bottom .left_title .left_text:nth-child(2){
     opacity: 0;
 }
 .sc_creator .group_creator{
     position: relative;
-    height: 600vh;
+    height: 200vh;
 }
 .sc_creator .group_creator .inner{
     position: sticky;
@@ -1151,6 +1154,9 @@
     font-size: 16px;
     line-height: 1.63;
     font-weight: 600;
+}
+.group_creator_slide .slide_desc_box{
+    padding: 0 60px 0 160px;
 }
 .slide_container .card_v4 .card_content .card_content_desc{
     margin-top: 24px;
