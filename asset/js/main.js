@@ -303,7 +303,6 @@ const financeTl = gsap.timeline({
     invalidateOnRefresh:true,
     toggleClass:"active",
     onUpdate: function (self) {
-      console.log(self);
       if (self.progress > 0.5) {
         gsap.to('.left_text:nth-child(1)', {opacity: 1}, 'b');
         gsap.to('.left_text:nth-child(2)', {opacity: 0}, 'b');
