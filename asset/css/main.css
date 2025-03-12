@@ -92,7 +92,6 @@
     position: relative;
     height: 500vh;
 }
-.sc_showcase .showcase_container{}
 .sc_showcase .group_show_thumb{
     position: relative;
     height: 100%;
@@ -381,11 +380,8 @@
 }
 .sc_possible .slide_sub{
     flex-shrink: 0;
-    /* padding: 0 60px 0 160px; */
     width: 100vw;
     margin-left: 60px;
-}
-.sc_possible .slide_sub .graphic_box{
 }
 .sc_possible .slide_sub .graphic_box .graphic_wrap{
     position: relative;
